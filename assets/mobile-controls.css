@@ -1,0 +1,54 @@
+#touch-controls[hidden], #touch-controls [hidden] { display: none !important; }
+#touch-toggle[hidden] { display: none !important; }
+#touch-toggle { position: fixed; top: max(20px, env(safe-area-inset-top)); left: max(16px, env(safe-area-inset-left)); z-index: 21; height: 46px; padding: 0 12px; border: 1px solid #ffffff65; border-radius: 10px; background: #07100de6; color: #fff; font: 600 12px Arial, sans-serif; cursor: pointer; touch-action: manipulation; }
+#touch-toggle[aria-pressed="true"] { color: #85ffba; border-color: #41ed91; }
+#touch-toggle:focus-visible { outline: 2px solid #41ed91; outline-offset: 3px; }
+#touch-controls { position: fixed; inset: 0; z-index: 15; pointer-events: none; color: #fff; font: 600 12px Arial, sans-serif; user-select: none; -webkit-user-select: none; }
+.touch-enabled #canvas { touch-action: none; }
+#touch-controls button, #touch-controls [data-stick] { pointer-events: auto; touch-action: none; -webkit-tap-highlight-color: transparent; }
+#touch-controls button { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; padding: 6px; border: 1px solid #ffffff65; background: #07100dd9; color: #fff; font: inherit; box-shadow: 0 3px 15px #0004; }
+#touch-controls button:focus-visible { outline: 2px solid #41ed91; outline-offset: 3px; }
+#touch-controls button.pressed { background: #168450dc; border-color: #7dffb7; }
+.touch-toolbar { position: absolute; top: max(76px, calc(env(safe-area-inset-top) + 62px)); left: max(16px, env(safe-area-inset-left)); display: flex; gap: 8px; }
+.touch-toolbar button { border-radius: 12px; }
+.touch-stick { position: absolute; left: max(24px, env(safe-area-inset-left)); bottom: max(24px, env(safe-area-inset-bottom)); width: 136px; height: 136px; border: 1px solid #ffffff70; border-radius: 50%; background: radial-gradient(circle, #0004 40%, #102d235c); box-shadow: inset 0 0 25px #0004; }
+.touch-stick::before, .touch-stick::after { content: ''; position: absolute; background: #ffffff25; }
+.touch-stick::before { left: 50%; top: 12px; bottom: 12px; width: 1px; }
+.touch-stick::after { top: 50%; left: 12px; right: 12px; height: 1px; }
+.touch-stick-thumb { position: absolute; left: calc(50% - 25px); top: calc(50% - 25px); width: 50px; height: 50px; border-radius: 50%; background: #41ed915e; border: 1px solid #b1ffd3; box-sizing: border-box; }
+.touch-stick-label { position: absolute; left: 0; right: 0; bottom: -18px; text-align: center; font-size: 10px; letter-spacing: 2px; text-shadow: 0 1px 4px #000; }
+.touch-actions { position: absolute; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); display: grid; grid-template-columns: repeat(3, 54px); gap: 8px; }
+.touch-actions button { width: 54px; height: 54px; border-radius: 50%; font-size: 11px; }
+.touch-actions [data-mouse="0"] { border-color: #41ed91; color: #85ffba; background: #103526c9; }
+.touch-look-hint { position: absolute; bottom: max(22px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); font-size: 9px; letter-spacing: 1.5px; color: #fffc; text-shadow: 0 1px 5px #000; }
+.touch-menu-panel { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; grid-template-columns: repeat(3, 48px); gap: 6px; padding: 12px; border: 1px solid #ffffff55; border-radius: 16px; background: #000c; }
+.touch-menu-panel button { border-radius: 9px; }
+.touch-menu-panel .menu-up { grid-column: 2; }
+.touch-menu-panel .menu-left { grid-column: 1; }
+.touch-menu-panel .menu-down { grid-column: 2; }
+.touch-menu-panel .menu-back { grid-column: 1; }
+.touch-menu-panel .menu-resume { grid-column: 3; }
+.touch-rotate { display: none; position: absolute; top: 128px; width: 100%; text-align: center; font-size: 11px; text-shadow: 0 2px 4px #000; }
+#touch-modes { display: none; }
+.touch-enabled #touch-modes { position: absolute; z-index: 6; bottom: max(26px, env(safe-area-inset-bottom)); left: 12px; right: 12px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; font: 600 13px Arial, sans-serif; }
+#touch-modes button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 8px 16px; border: 1px solid #ffffff70; border-radius: 12px; background: #07100deb; color: #fff; font: inherit; touch-action: manipulation; }
+#touch-modes button[hidden] { display: none; }
+#touch-loading-status { flex-basis: 100%; text-align: center; text-shadow: 0 1px 4px #000; }
+.touch-enabled #modes { display: none; }
+.touch-enabled #ls-bars { top: 585px; }
+.touch-preview #touch-modes, .touch-preview #ls-bars { display: none; }
+.touch-preview #loading { pointer-events: none; }
+@media (orientation: portrait) {
+  #touch-toggle { top: max(70px, calc(env(safe-area-inset-top) + 60px)); }
+  .touch-toolbar { top: max(126px, calc(env(safe-area-inset-top) + 116px)); }
+  .touch-rotate { display: block; top: 186px; }
+  .touch-stick { width: 120px; height: 120px; left: max(14px, env(safe-area-inset-left)); bottom: max(30px, env(safe-area-inset-bottom)); }
+  .touch-actions { grid-template-columns: repeat(3, 48px); gap: 6px; right: max(12px, env(safe-area-inset-right)); }
+  .touch-actions button { width: 48px; height: 48px; min-width: 48px; }
+  .touch-look-hint { bottom: 210px; }
+}
+@media (max-height: 420px) and (orientation: landscape) {
+  .touch-stick { width: 112px; height: 112px; bottom: max(20px, env(safe-area-inset-bottom)); }
+  .touch-actions { grid-template-columns: repeat(3, 48px); gap: 6px; }
+  .touch-actions button { width: 48px; height: 48px; }
+}

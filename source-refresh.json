@@ -1,0 +1,17 @@
+{
+  "source": "https://gta.deloskiyt.pl",
+  "build": "/b/8b0b5899ed",
+  "freshBuild": "/b/8b0b5899ed-r20261014",
+  "sha256": {
+    "/b/8b0b5899ed/io_worker.js": "d91c89e64f7f280666b5c9d1669ed6d65d66605077264569a49146ed79fe0bae",
+    "/b/8b0b5899ed/loader.js": "9de25898fa9a9ec5e67ca647debf941849b936e3163402944581feaaae5ac0ff",
+    "/b/8b0b5899ed/game.js": "81a7d6e912238de3d89bcafb1b01450671c6793167babb0ec970f308f454bcf0",
+    "/b/8b0b5899ed/wgpu_worker.js": "826dfaa9012dee081db6985b8973c18882ccafae23f935f6eb18eec392ebec58",
+    "/data/manifest.json": "c5d7b041dbcde22e54f97dc271a52690ea6101391bfda3fb9ecd13d8ef748c1a",
+    "/b/8b0b5899ed/audio-worklet.js": "b13234bb591e67a544be7473b0678a940c6f61e3274255ca96790ce41fbe5aae",
+    "/b/8b0b5899ed/shaders/index.json": "11c331895051b30126980ef666bd8935314ab400348b17c56ef8fe8983f50ee0",
+    "/data/bootset.json": "8ebc53cd530e7abebca2f4a923beda7ba0f7683aac6c262e2f64f0e15a408942",
+    "/data/bootset_low.json": "ae3b57c1479e0ff40f12fe66832c4335d0f9bf220e0ec22c1becfcac3f377c16",
+    "/b/8b0b5899ed/game.wasm": "11ca8d2c04c5e843d18ff4aea4899d72c86973c6b031df334e67c446b2ae83e0"
+  }
+}

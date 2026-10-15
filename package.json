@@ -1,0 +1,8 @@
+{
+  "name": "gta5-browser",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node verify-controls.mjs && node verify-mobile-controls.mjs && node verify-loader-startup.mjs"
+  }
+}
